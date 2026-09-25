@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brèche Cyriol Ngoubili Mbani — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<!-- Script d'anti-flash pour le mode sombre/clair -->
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  })();
+</script>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <div class="nav">
+    <div class="brand">Brèche <span>Cyriol</span></div>
+    <nav class="navlinks">
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+      <!-- Bouton Toggle Thème Jour/Nuit -->
+      <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="status"><span class="dot"></span>DISPONIBLE — recherche stage / opportunités</div>
+    <h1>Brèche Cyriol<br>Ngoubili Mbani</h1>
+    <p class="role">Étudiant en <strong>3ᵉ année Génie Logiciel &amp; Sécurité des Systèmes/Réseaux</strong> au CFI‑CIRAS (Brazzaville), affilié à la Cisco Networking Academy. Je conçois des applications full‑stack et je m'intéresse particulièrement à la sécurité applicative et à l'automatisation.</p>
+    
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Me contacter</a>
+      <!-- LIEN DU CV : Assure-toi que le fichier 'CV_Breche_Cyriol.pdf' est bien présent dans le même dossier -->
+      <a href="CV_Breche_Cyriol.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Télécharger mon CV</a>
+    </div>
+
+    <div class="hero-meta">
+      <span><b>Localisation</b> — Brazzaville, Congo</span>
+      <span><b>Établissement</b> — CFI‑CIRAS</span>
+      <span><b>GitHub</b> — github.com/BRECHEE</span>
+    </div>
+  </section>
+
+  <section class="about reveal">
+    <h2>À propos</h2>
+    <p>Mon fil rouge, c'est de faire le lien entre développement logiciel et sécurité : de la conception d'une architecture DDD à la mise en place d'un pipeline CI/CD, en passant par la construction d'outils qui analysent la sécurité du code plutôt que de simplement l'exécuter.</p>
+    <p>Je termine actuellement mon Projet de Fin d'Études, <strong>SecureApp Monitor</strong>, un scanner de vulnérabilités multi‑langages inspiré de Snyk et SonarQube. Côté réseau, j'ai validé les modules CCNA 1 &amp; 2 de Cisco, et je travaille en méthode Agile (attestation Scrum).</p>
+  </section>
+
+  <!-- Ancre pour #competences -->
+  <section id="competences" class="reveal">
+    <h2>Compétences <small>par domaine</small></h2>
+    <div class="skillgrid reveal-stagger">
+      <div class="skillcard">
+        <h3>Développement</h3>
+        <p>Python, Java, C/C++, PHP, JavaScript/TypeScript — back‑end FastAPI, front‑end React/Next.js</p>
+      </div>
+      <div class="skillcard">
+        <h3>Sécurité applicative</h3>
+        <p>Analyse statique de code, standards OWASP, conception orientée sécurité (RBAC, DDD)</p>
+      </div>
+      <div class="skillcard">
+        <h3>Réseaux</h3>
+        <p>CCNA 1 &amp; 2 validés — VLAN, VTP, trunking, routage, DHCP, sommaires de routes statiques</p>
+      </div>
+      <div class="skillcard">
+        <h3>Données &amp; IA</h3>
+        <p>PostgreSQL, MySQL, FAISS, pipelines RAG avec LangChain</p>
+      </div>
+      <div class="skillcard">
+        <h3>Méthodes &amp; outils</h3>
+        <p>Scrum/Agile, CI/CD, UML (notation Pascal Roques), Git/GitHub</p>
+      </div>
+      <div class="skillcard">
+        <h3>Production de contenu</h3>
+        <p>Génération automatisée de documents et de présentations (docx, PptxGenJS) pour dossiers techniques</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ancre pour #projets -->
+  <section id="projets" class="reveal">
+    <h2>Projets phares</h2>
+    <div class="projects reveal-stagger">
+
+      <div class="pcard" style="--dot:#7C6CF0">
+        <div class="pcard-top">
+          <h3>SecureApp Monitor</h3>
+          <span class="tag flagship">Projet de Fin d'Études</span>
+        </div>
+        <p>Scanner de vulnérabilités de code statique, pensé comme une alternative locale et pédagogique à Snyk et SonarQube. S'appuie sur les référentiels OWASP et couvre Python, Java, C/C++ et PHP. Architecture DDD, orchestration des analyses, génération de rapports et gestion des accès (RBAC).</p>
+        <div class="stack">
+          <span>FastAPI</span><span>SQLAlchemy</span><span>Python</span><span>Java</span><span>C/C++</span><span>PHP</span><span>OWASP</span>
+        </div>
+        <div class="pcard-links">
+          <a href="https://github.com/BRECHEE" target="_blank" rel="noopener" class="stretched-link">Code Source (GitHub) →</a>
+        </div>
+      </div>
+
+      <div class="pcard" style="--dot:#28D0D8">
+        <div class="pcard-top">
+          <h3>Pipeline CI/CD</h3>
+          <span class="tag">Projet PFE‑connexe</span>
+        </div>
+        <p>Conception et documentation d'un pipeline d'intégration et de déploiement continus, avec dossier de soutenance complet : architecture, stack technique, planning Agile et matrice des risques.</p>
+        <div class="stack"><span>CI/CD</span><span>Architecture logicielle</span><span>Gestion de projet Agile</span></div>
+        <div class="pcard-links">
+          <a href="https://github.com/BRECHEE" target="_blank" rel="noopener" class="stretched-link">Documentation &amp; Architecture →</a>
+        </div>
+      </div>
+
+      <div class="pcard" style="--dot:#FFB648">
+        <div class="pcard-top">
+          <h3>Brèche Hôtel</h3>
+          <span class="tag">Projet Web</span>
+        </div>
+        <p>Site vitrine complet pour un hôtel de luxe fictif, pensé pour restituer une esthétique haut de gamme d'hôtellerie — implémentation complète, pas un simple prototype statique.</p>
+        <div class="stack"><span>Next.js</span><span>TypeScript</span></div>
+        <div class="pcard-links">
+          <a href="https://pacific-hotel-demo.vercel.app/" target="_blank" rel="noopener" class="stretched-link">Voir la démo →</a>
+        </div>
+      </div>
+
+      <div class="pcard" style="--dot:#3DDC97">
+        <div class="pcard-top">
+          <h3>SmartDoc AI</h3>
+          <span class="tag">Projet IA</span>
+        </div>
+        <p>Chatbot documentaire full‑stack basé sur une pipeline RAG (Retrieval‑Augmented Generation) : indexation vectorielle des documents et réponses contextuelles.</p>
+        <div class="stack"><span>FastAPI</span><span>PostgreSQL</span><span>FAISS</span><span>LangChain</span><span>Streamlit</span></div>
+        <div class="pcard-links">
+          <a href="https://github.com/BRECHEE" target="_blank" rel="noopener" class="stretched-link">Code Source (GitHub) →</a>
+        </div>
+      </div>
+
+      <div class="pcard" style="--dot:#FF5C8A">
+        <div class="pcard-top">
+          <h3>Weddingly</h3>
+          <span class="tag">Projet SaaS</span>
+        </div>
+        <p>Plateforme de création de sites de mariage : chaque couple obtient son propre site, envoie des invitations personnalisées et centralise toutes les photos de l'événement au même endroit.</p>
+        <div class="stack"><span>Lovable</span><span>React</span><span>UI/UX</span></div>
+        <div class="pcard-links">
+          <a href="https://github.com/BRECHEE" target="_blank" rel="noopener" class="stretched-link">Voir le projet →</a>
+        </div>
+      </div>
+
+      <div class="pcard" style="--dot:#5BC0EB">
+        <div class="pcard-top">
+          <h3>Opticare Congo</h3>
+          <span class="tag">Projet Web</span>
+        </div>
+        <p>Site web vitrine pour Opticare Congo, conçu pour présenter ses services et faciliter la prise de contact.</p>
+        <div class="stack"><span>Web</span><span>UI/UX</span></div>
+        <div class="pcard-links">
+          <a href="https://opticare-congo-website.vercel.app/" target="_blank" rel="noopener" class="stretched-link">Voir la démo →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Autres réalisations</h2>
+    <div class="others reveal-stagger">
+      <div class="ocard">
+        <div class="ocard-top"><h4>CyberSafe Kids</h4><span class="otag">Cybersécurité</span></div>
+        <p>Site éducatif de sensibilisation à la cybersécurité pour enfants, avec identité visuelle repensée.</p>
+      </div>
+      <div class="ocard">
+        <div class="ocard-top"><h4>Bibliothèque CFI‑CIRAS</h4><span class="otag">Web Vanilla</span></div>
+        <p>Système de gestion de bibliothèque universitaire — HTML/CSS/JS vanilla, stockage LocalStorage.</p>
+      </div>
+      <div class="ocard">
+        <div class="ocard-top"><h4>Plateforme Gaming</h4><span class="otag">PHP / MySQL</span></div>
+        <p>Site communautaire d'actualités jeux vidéo, multi‑pages avec gestion dynamique des contenus.</p>
+      </div>
+      <div class="ocard">
+        <div class="ocard-top"><h4>App Mobile de Notes</h4><span class="otag">React Native</span></div>
+        <p>Application mobile de prise de notes — React Native/Expo, gestion d'état centralisée avec Zustand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Certifications</h2>
+    <div class="certs reveal-stagger">
+      <div class="cert"><span>🎓</span><div><b>CCNA 1</b><small>Cisco Networking Academy</small></div></div>
+      <div class="cert"><span>🎓</span><div><b>CCNA 2</b><small>Cisco Networking Academy</small></div></div>
+      <div class="cert"><span>📋</span><div><b>Scrum</b><small>Attestation méthode Agile</small></div></div>
+    </div>
+  </section>
+
+  <!-- Ancre pour #contact -->
+  <section id="contact" class="contact reveal">
+    <h2>Contact</h2>
+    <div class="contactgrid reveal-stagger">
+      <a class="ccard" href="mailto:brechecyriolngoubilimbani@gmail.com"><small>EMAIL</small><b>brechecyriolngoubilimbani@gmail.com</b></a>
+      <a class="ccard" href="tel:+242065844516"><small>TÉLÉPHONE</small><b>+242 06 584 45 16</b></a>
+      <a class="ccard" href="https://github.com/BRECHEE" target="_blank" rel="noopener"><small>GITHUB</small><b>github.com/BRECHEE</b></a>
+    </div>
+  </section>
+
+</div>
+
+<footer>Brèche Cyriol Ngoubili Mbani — Brazzaville, République du Congo</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
